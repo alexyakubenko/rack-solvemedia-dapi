@@ -64,6 +64,8 @@ EOS
           h = h + ",H3:" + Digest::SHA1.hexdigest(domain.downcase)
           h = h + ",H4:" + Digest::MD5.hexdigest(email.downcase)
           h = h + ",H5:" + Digest::MD5.hexdigest(email.upcase)
+          h = h + ",H6:" + Digest::SHA256.hexdigest(email.downcase)
+          h = h + ",H7:" + Digest::SHA256.hexdigest(email.upcase)
           
           return h
         end
